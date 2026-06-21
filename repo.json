@@ -32,7 +32,7 @@
         "Author":  "Nainaiowo",
         "Name":  "Better Deaths Testing",
         "InternalName":  "BetterDeathsTesting",
-        "AssemblyVersion":  "0.1.0.72",
+        "AssemblyVersion":  "0.1.0.721",
         "Description":  "Records party deaths with pull grouping, likely cause, active statuses, and recent action timelines.",
         "ApplicableVersion":  "any",
         "RepoUrl":  "https://github.com/Nainaiowo/better-deaths-testing",
@@ -53,9 +53,9 @@
         "DownloadCount":  0,
         "IsHide":  false,
         "IsTestingExclusive":  false,
-        "DownloadLinkInstall":  "https://github.com/Nainaiowo/project-honorific/releases/download/better-deaths-testing-v0.1.0.72/latest.zip",
-        "DownloadLinkTesting":  "https://github.com/Nainaiowo/project-honorific/releases/download/better-deaths-testing-v0.1.0.72/latest.zip",
-        "DownloadLinkUpdate":  "https://github.com/Nainaiowo/project-honorific/releases/download/better-deaths-testing-v0.1.0.72/latest.zip",
-        "LastUpdate":  1782076416
+        "DownloadLinkInstall":  "https://github.com/Nainaiowo/project-honorific/releases/download/better-deaths-testing-v0.1.0.721/latest.zip",
+        "DownloadLinkTesting":  "https://github.com/Nainaiowo/project-honorific/releases/download/better-deaths-testing-v0.1.0.721/latest.zip",
+        "DownloadLinkUpdate":  "https://github.com/Nainaiowo/project-honorific/releases/download/better-deaths-testing-v0.1.0.721/latest.zip",
+        "LastUpdate":  1782077869
     }
 ]
