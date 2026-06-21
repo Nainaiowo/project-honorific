@@ -1,0 +1,16 @@
+{
+  "Author": "Nainaiowo",
+  "Name": "Project Honorific",
+  "InternalName": "ProjectHonorific",
+  "DownloadCount": 0,
+  "Punchline": "Show your current project work as an Honorific title.",
+  "Description": "Reads a local project status bridge file and sends the current project activity to an Honorific-compatible title plugin.",
+  "RepoUrl": "https://github.com/Nainaiowo/project-honorific",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "honorific",
+    "codex",
+    "status",
+    "project"
+  ]
+}

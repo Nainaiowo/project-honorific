@@ -1,0 +1,31 @@
+[
+  {
+    "Author": "Nainaiowo",
+    "Name": "Project Honorific",
+    "InternalName": "ProjectHonorific",
+    "AssemblyVersion": "0.1.0.9",
+    "DownloadCount": 0,
+    "Description": "Reads a local project status bridge file and sends the current project activity to an Honorific-compatible title plugin.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Nainaiowo/project-honorific",
+    "Tags": [
+      "honorific",
+      "codex",
+      "status",
+      "project"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "Show your current project work as an Honorific title.",
+    "AcceptsFeedback": true,
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkInstall": "https://github.com/Nainaiowo/project-honorific/releases/download/v0.1.0.9/latest.zip",
+    "DownloadLinkTesting": "https://github.com/Nainaiowo/project-honorific/releases/download/v0.1.0.9/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/Nainaiowo/project-honorific/releases/download/v0.1.0.9/latest.zip",
+    "LastUpdate": 1782047141
+  }
+]
