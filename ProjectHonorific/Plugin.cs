@@ -119,6 +119,13 @@ public sealed class Plugin : IDalamudPlugin
         }
     }
 
+    public void SetDisplayProjectInformation(bool display)
+    {
+        Configuration.DisplayProjectInformation = display;
+        Configuration.Save();
+        RefreshStatus(force: true);
+    }
+
     public void SetStatusFilePath(string path)
     {
         Configuration.StatusFilePath = path.Trim();
@@ -620,6 +627,7 @@ public sealed class Plugin : IDalamudPlugin
         var title = SanitizeTitle(displayTitle.Title);
         if (string.IsNullOrWhiteSpace(title))
         {
+            ClearTitle(force);
             return false;
         }
 
@@ -817,10 +825,24 @@ public sealed class Plugin : IDalamudPlugin
 
     private DisplayTitle SelectDisplayTitle(string baseTitle)
     {
-        var sanitizedBaseTitle = SanitizeTitle(baseTitle);
+        var sanitizedBaseTitle = Configuration.DisplayProjectInformation
+            ? SanitizeTitle(baseTitle)
+            : string.Empty;
+        var handwrittenTitles = (Configuration.HandwrittenTitleEntries ?? [])
+            .Select(entry => new DisplayTitleOption(
+                SanitizeTitle(entry.Title),
+                Math.Clamp(entry.DurationSeconds, 2.0f, 120.0f),
+                entry.Style))
+            .Where(entry => !string.IsNullOrWhiteSpace(entry.Title))
+            .ToList();
+
         if (!Configuration.RotateHandwrittenTitles)
         {
-            return new DisplayTitle(sanitizedBaseTitle, null);
+            return !string.IsNullOrWhiteSpace(sanitizedBaseTitle)
+                ? new DisplayTitle(sanitizedBaseTitle, null)
+                : handwrittenTitles.Count > 0
+                    ? new DisplayTitle(handwrittenTitles[0].Title, handwrittenTitles[0].Style)
+                    : new DisplayTitle(string.Empty, null);
         }
 
         var titles = new List<DisplayTitleOption>();
@@ -829,16 +851,11 @@ public sealed class Plugin : IDalamudPlugin
             titles.Add(new DisplayTitleOption(sanitizedBaseTitle, Math.Clamp(Configuration.HandwrittenTitleRotationSeconds, 2.0f, 120.0f), null));
         }
 
-        titles.AddRange((Configuration.HandwrittenTitleEntries ?? [])
-            .Select(entry => new DisplayTitleOption(
-                SanitizeTitle(entry.Title),
-                Math.Clamp(entry.DurationSeconds, 2.0f, 120.0f),
-                entry.Style))
-            .Where(entry => !string.IsNullOrWhiteSpace(entry.Title)));
+        titles.AddRange(handwrittenTitles);
 
         if (titles.Count == 0)
         {
-            return new DisplayTitle(sanitizedBaseTitle, null);
+            return new DisplayTitle(string.Empty, null);
         }
 
         if (titles.Count <= 1)

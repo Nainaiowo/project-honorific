@@ -79,6 +79,8 @@ public sealed class Configuration : IPluginConfiguration
 
     public bool Enabled { get; set; } = true;
 
+    public bool DisplayProjectInformation { get; set; } = true;
+
     public string StatusFilePath { get; set; } = DefaultStatusFilePath;
 
     public float PollIntervalSeconds { get; set; } = 2.0f;

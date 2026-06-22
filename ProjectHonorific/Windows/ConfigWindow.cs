@@ -33,6 +33,18 @@ public sealed class ConfigWindow : Window, IDisposable
             plugin.SetEnabled(enabled);
         }
 
+        ImGui.SameLine();
+        var displayProjectInformation = config.DisplayProjectInformation;
+        if (ImGui.Checkbox("Display", ref displayProjectInformation))
+        {
+            plugin.SetDisplayProjectInformation(displayProjectInformation);
+        }
+
+        if (ImGui.IsItemHovered())
+        {
+            ImGui.SetTooltip("Include the generated project or idle title in the rotation. Handwritten titles can still rotate when this is off.");
+        }
+
         var statusFilePath = config.StatusFilePath;
         if (ImGui.InputText("Status file", ref statusFilePath, 512))
         {
@@ -98,7 +110,7 @@ public sealed class ConfigWindow : Window, IDisposable
     {
         ImGui.Separator();
         ImGui.TextUnformatted("Handwritten title rotation");
-        DrawDisabledWrapped("The generated project title is always included. Added handwritten titles rotate with it.");
+        DrawDisabledWrapped("When Display is on, the generated project or idle title is included. Handwritten titles can still rotate without project information when Display is off.");
 
         var rotate = config.RotateHandwrittenTitles;
         if (ImGui.Checkbox("Rotate handwritten titles", ref rotate))
