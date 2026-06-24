@@ -36,7 +36,8 @@ function Convert-RepositoryNameToProjectName {
         "better-deaths" = "Better Deaths"
         "dmu-p3-blackhole-helper" = "DMU P3 Blackhole Helper"
         "chibi-chaos" = "Chibi Chaos"
-        "project-honorific" = "Project Honorific"
+        "project-honorific" = "Plugin Work"
+        "project-honorific-updater" = "Plugin Work"
     }
 
     if ($knownProjects.ContainsKey($RepositoryName)) {
