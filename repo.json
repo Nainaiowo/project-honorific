@@ -34,14 +34,15 @@
         "InternalName":  "NaiDebugConsole",
         "AssemblyVersion":  "0.1.0.14",
         "DownloadCount":  19,
-        "Description":  "Local debug console for combat logs, addon snapshots, and Strategy Board inspection.",
+        "Description":  "Local debug console for combat logs, addon snapshots, and Strategy Board inspection. Open with /ndc.",
         "ApplicableVersion":  "any",
         "RepoUrl":  "https://github.com/Nainaiowo/nai-debug-console",
         "Tags":  [
                      "debug",
                      "logger",
                      "combat",
-                     "strategy"
+                     "strategy",
+                     "/ndc"
                  ],
         "DalamudApiLevel":  15,
         "LoadRequiredState":  0,
