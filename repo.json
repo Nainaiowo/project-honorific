@@ -32,8 +32,8 @@
         "Author":  "Nainaiowo",
         "Name":  "Nai Debug Console",
         "InternalName":  "NaiDebugConsole",
-        "AssemblyVersion":  "0.1.0.16",
-        "DownloadCount":  19,
+        "AssemblyVersion":  "0.1.0.17",
+        "DownloadCount":  25,
         "Description":  "Local debug console for combat logs, addon snapshots, and Strategy Board inspection. Open with /ndc.",
         "ApplicableVersion":  "any",
         "RepoUrl":  "https://github.com/Nainaiowo/nai-debug-console",
@@ -53,9 +53,9 @@
         "AcceptsFeedback":  true,
         "IsHide":  false,
         "IsTestingExclusive":  false,
-        "DownloadLinkInstall":  "https://github.com/Nainaiowo/nai-debug-console/releases/download/v0.1.0.16/latest.zip",
-        "DownloadLinkTesting":  "https://github.com/Nainaiowo/nai-debug-console/releases/download/v0.1.0.16/latest.zip",
-        "DownloadLinkUpdate":  "https://github.com/Nainaiowo/nai-debug-console/releases/download/v0.1.0.16/latest.zip",
-        "LastUpdate":  1783184958
+        "DownloadLinkInstall":  "https://github.com/Nainaiowo/nai-debug-console/releases/download/v0.1.0.17/latest.zip",
+        "DownloadLinkTesting":  "https://github.com/Nainaiowo/nai-debug-console/releases/download/v0.1.0.17/latest.zip",
+        "DownloadLinkUpdate":  "https://github.com/Nainaiowo/nai-debug-console/releases/download/v0.1.0.17/latest.zip",
+        "LastUpdate":  1783186331
     }
 ]
