@@ -34,7 +34,7 @@ function Convert-RepositoryNameToProjectName {
 
     $knownProjects = @{
         "better-deaths" = "Better Deaths"
-        "dmu-p3-blackhole-helper" = "DMU P3 Blackhole Helper"
+        "dmu-p4-debuff-helper" = "DMU Helper"
         "chibi-chaos" = "Chibi Chaos"
         "project-honorific" = "Plugin Work"
         "project-honorific-updater" = "Plugin Work"

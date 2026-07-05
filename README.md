@@ -76,7 +76,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\set-project-status
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\set-project-status.ps1 -Activity Pushing
 ```
 
-Known repository names are normalized into friendly project names such as `Better Deaths`, `DMU P3 Blackhole Helper`, `Chibi Chaos`, and `Project Honorific`.
+Known repository names are normalized into friendly project names such as `Better Deaths`, `DMU Helper`, `Chibi Chaos`, and `Project Honorific`.
 
 Handwritten title rotation:
 
